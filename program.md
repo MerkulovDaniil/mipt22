@@ -22,3 +22,13 @@ nav_order: 2
 [📄 Материалы](/presentations/4.pdf). [📝 Записи](/notes/4.pdf). [▶️ Youtube](https://youtu.be/QKiD0mdjWAE). [💿 Скачать](https://disk.yandex.ru/i/VE2ff0CRsLg6yg)
 
 Выпуклость. Выпуклые множества. Выпуклые функции.
+
+### Занятие 5.
+[📄 Материалы](/presentations/5.pdf). [📝 Записи](/notes/5.pdf). [▶️ Youtube](). [💿 Скачать]()
+
+Сопряженные множества. Сопряженные конусы.
+
+### Занятие 6.
+[📄 Материалы](/presentations/6.pdf). [📝 Записи](/notes/6.pdf). [▶️ Youtube](). [💿 Скачать]()
+
+Сопряженные функции. Сопряженная норма.
