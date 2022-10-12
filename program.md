@@ -24,11 +24,11 @@ nav_order: 2
 Выпуклость. Выпуклые множества. Выпуклые функции. Критерии выпуклости. 
 
 ### Занятие 5.
-[📄 Материалы](/presentations/5.pdf). [📝 Записи](/notes/5.pdf). [▶️ Youtube](). [💿 Скачать]()
+[📄 Материалы](/presentations/5.pdf). [📝 Записи](/notes/5.pdf). [▶️ Youtube](https://youtu.be/Wl6HT9CNb-w). [💿 Скачать](https://disk.yandex.ru/i/oxZgtYSAWDWrOw)
 
 Сопряженные множества. Сумма Минковского. Сопряженные конусы. Многогранники.
 
 ### Занятие 6.
-[📄 Материалы](/presentations/6.pdf). [📝 Записи](/notes/6.pdf). [▶️ Youtube](). [💿 Скачать]()
+[📄 Материалы](/presentations/6.pdf). [📝 Записи](/notes/6.pdf). [▶️ Youtube](https://youtu.be/cOiwSoPyUtI). [💿 Скачать](https://disk.yandex.ru/i/eo8eXwd876VmDw)
 
 Сопряженные функции. Преобразование Лежандра. Сопряженная норма.
