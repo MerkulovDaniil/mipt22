@@ -39,11 +39,11 @@ nav_order: 2
 Субградиент. Субдифференциал. Теоремы Моро-Рокафеллара, Дубовицкого-Милютина.
 
 ## Занятие 8. 
-[📄 Материалы](/presentations/8.pdf). [📝 Записи](/notes/8.pdf). [▶️ Youtube](). [💿 Скачать]()
+[📄 Материалы](/presentations/8.pdf). [📝 Записи](/notes/8.pdf). [▶️ Youtube](https://youtu.be/PxFHoTxlYzw). [💿 Скачать](https://disk.yandex.ru/i/ijKCehnYKaxWqQ)
 
 Условия оптимальности. Функция Лагранжа. Множители Лагранжа. Теорема Каруша - Куна - Таккера.
 
 ## Занятие 9. 
-[📄 Материалы](/presentations/9.pdf). [📝 Записи](/notes/9.pdf). [▶️ Youtube](). [💿 Скачать]()
+[📄 Материалы](/presentations/9.pdf). [📝 Записи](/notes/9.pdf). [▶️ Youtube](https://youtu.be/6eB8FFVT8iA). [💿 Скачать](https://disk.yandex.ru/i/gkOVKoUgPjP2Dg)
 
-Введение в двойственность.
+Введение в двойственность. Двойственная задача. Two-way partitioning problem. Проекция точки на вероятностный симплекс. 
