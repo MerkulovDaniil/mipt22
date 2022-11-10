@@ -147,3 +147,189 @@ You can use any automatic differentiation framework in this section (Jax, PyTorc
     where $$e_i$$ is $$i$$-th canonical basis vector (column of identity matrix).
 
 1. Find $$\partial f(x)$$, if $$f(x) = e^{\|x\|}$$. Try do the task for an arbitrary norm. At least, try $$\|\cdot\| = \|\cdot\|_{\{2,1,\infty\}}$$.
+
+## General optimization problem
+
+1. Consider the problem of projection some point $$y \in \mathbb{R}^n,  y \notin \Delta^n$$ onto the unit simplex $$\Delta^n$$. Find 2 ways to solve the problem numerically and compare them in terms of the total computational time, memory requirements and iteration number for $$n = 10, 100, 1000$$. 
+
+	$$
+	\begin{split}
+	& \|x - y \|_2^2 \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & 1^\top x = 1, \\
+	& x \succeq 0 
+	\end{split}
+	$$
+
+1. Give an explicit solution of the following LP.
+	
+	$$
+	\begin{split}
+	& c^\top x \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & Ax = b
+	\end{split}
+	$$
+
+1. Give an explicit solution of the following LP.
+	
+	$$
+	\begin{split}
+	& c^\top x \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & 1^\top x = 1, \\
+	& x \succeq 0 
+	\end{split}
+	$$
+
+	This problem can be considered as a simplest portfolio optimization problem.
+
+1. Give an explicit solution of the following LP.
+	
+	$$
+	\begin{split}
+	& c^\top x \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & 1^\top x = \alpha, \\
+	& 0 \preceq x \preceq 1,
+	\end{split}
+	$$
+
+	where $$\alpha$$ is an integer between $$0$$ and $$n$$. What happens if $$\alpha$$ is not an integer (but satisfies $$0 \leq \alpha \leq n$$)? What if we change the equality to an inequality $$1^\top x \leq \alpha$$?
+
+1. Give an explicit solution of the following QP.
+	
+	$$
+	\begin{split}
+	& c^\top x \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & x^\top A x \leq 1,
+	\end{split}
+	$$
+
+	where $$A \in \mathbb{S}^n_{++}, c \neq 0$$. What is the solution if the problem is not convex $$(A \notin \mathbb{S}^n_{++})$$ (Hint: consider eigendecomposition of the matrix: $$A = Q \mathbf{diag}(\lambda)Q^\top = \sum\limits_{i=1}^n \lambda_i q_i q_i^\top$$ and different cases of $$\lambda >0, \lambda=0, \lambda<0$$)?
+
+1. Give an explicit solution of the following QP.
+	
+	$$
+	\begin{split}
+	& c^\top x \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & (x - x_c)^\top A (x - x_c) \leq 1,
+	\end{split}
+	$$
+
+	where $$A \in \mathbb{S}^n_{++}, c \neq 0, x_c \in \mathbb{R}^n$$.
+
+1. Give an explicit solution of the following QP.
+	
+	$$
+	\begin{split}
+	& x^\top Bx \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & x^\top A x \leq 1,
+	\end{split}
+	$$
+
+	where $$A \in \mathbb{S}^n_{++}, B \in \mathbb{S}^n_{+}$$.
+
+1.  Consider the equality constrained least-squares problem
+	
+	$$
+	\begin{split}
+	& \|Ax - b\|_2^2 \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & Cx = d,
+	\end{split}
+	$$
+
+	where $$A \in \mathbb{R}^{m \times n}$$ with $$\mathbf{rank }A = n$$, and $$C \in \mathbb{R}^{k \times n}$$ with $$\mathbf{rank }C = k$$. Give the KKT conditions, and derive expressions for the primal solution $$x^*$$ and the dual solution $$\lambda^*$$.
+
+1. Derive the KKT conditions for the problem
+	
+	$$
+	\begin{split}
+	& \mathbf{tr \;}X - \log\text{det }X \to \min\limits_{X \in \mathbb{S}^n_{++} }\\
+	\text{s.t. } & Xs = y,
+	\end{split}
+	$$
+
+	where $$y \in \mathbb{R}^n$$ and $$s \in \mathbb{R}^n$$ are given with $$y^\top s = 1$$. Verify that the optimal solution is given by
+
+	$$
+	X^* = I + yy^\top - \dfrac{1}{s^\top s}ss^\top
+	$$
+
+1.  **Supporting hyperplane interpretation of KKT conditions**. Consider a **convex** problem with no equality constraints
+	
+	$$
+	\begin{split}
+	& f_0(x) \to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & f_i(x) \leq 0, \quad i = [1,m]
+	\end{split}
+	$$
+
+	Assume, that $$\exists x^* \in \mathbb{R}^n, \mu^* \in \mathbb{R}^m$$ satisfy the KKT conditions
+	
+	$$
+	\begin{split}
+    & \nabla_x L (x^*, \mu^*) = \nabla f_0(x^*) + \sum\limits_{i=1}^m\mu_i^*\nabla f_i(x^*) = 0 \\
+    & \mu^*_i \geq 0, \quad i = [1,m] \\
+    & \mu^*_i f_i(x^*) = 0, \quad i = [1,m]\\
+    & f_i(x^*) \leq 0, \quad i = [1,m]
+	\end{split}
+	$$
+
+	Show that
+
+	$$
+	\nabla f_0(x^*)^\top (x - x^*) \geq 0
+	$$
+
+	for all feasible $$x$$. In other words the KKT conditions imply the simple optimality criterion or $$\nabla f_0(x^*)$$ defines a supporting hyperplane to the feasible set at $$x^*$$.
+
+## Duality
+
+1.  **Fenchel + Lagrange = ♥.** Express the dual problem of
+	
+	$$
+	\begin{split}
+	& c^\top x\to \min\limits_{x \in \mathbb{R}^n }\\
+	\text{s.t. } & f(x) \leq 0
+	\end{split}
+	$$
+
+	with $$c \neq 0$$, in terms of the conjugate function $$f^*$$. Explain why the problem you give is convex. We do not assume $$f$$ is convex.
+
+1. **Minimum volume covering ellipsoid.** Let we have the primal problem:
+	
+	$$
+	\begin{split}
+	& \ln \text{det} X^{-1} \to \min\limits_{X \in \mathbb{S}^{n}_{++} }\\
+	\text{s.t. } & a_i^\top X a_i \leq 1 , i = 1, \ldots, m
+	\end{split}
+	$$
+
+	1. Find Lagrangian of the primal problem
+	1. Find the dual function
+	1. Write down the dual problem
+	1. Check whether problem holds strong duality or not
+	1. Write down the solution of the dual problem
+	
+1. **A penalty method for equality constraints.** We consider the problem of minimization
+	$$
+	\begin{split}
+	& f_0(x) \to \min\limits_{x \in \mathbb{R}^{n} }\\
+	\text{s.t. } & Ax = b,
+	\end{split}
+	$$
+	
+	where $$f_0(x): \mathbb{R}^n \to\mathbb{R} $$ is convex and differentiable, and $$A \in \mathbb{R}^{m \times n}$$ with $$\mathbf{rank }A = m$$. In a quadratic penalty method, we form an auxiliary function
+
+	$$
+	\phi(x) = f_0(x) + \alpha \|Ax - b\|_2^2,
+	$$
+	
+	where $$\alpha > 0$$ is a parameter. This auxiliary function consists of the objective plus the penalty term $$\alpha \|Ax - b\|_2^2$$. The idea is that a minimizer of the auxiliary function, $$\tilde{x}$$, should be an approximate solution of the original problem. Intuition suggests that the larger the penalty weight $$\alpha$$, the better the approximation $$\tilde{x}$$ to a solution of the original problem. Suppose $$\tilde{x}$$ is a minimizer of $$\phi(x)$$. Show how to find, from $$\tilde{x}$$, a dual feasible point for the original problem. Find the corresponding lower bound on the optimal value of the original problem.
+	
+1. **Analytic centering.** Derive a dual problem for
+	
+	$$
+	-\sum_{i=1}^m \log (b_i - a_i^\top x) \to \min\limits_{x \in \mathbb{R}^{n} }
+	$$
+
+	with domain $$\{x \mid a^\top_i x < b_i , i = [1,m]\}$$. 
+	
+	First introduce new variables $$y_i$$ and equality constraints $$y_i = b_i − a^\top_i x$$. (The solution of this problem is called the analytic center of the linear inequalities $$a^\top_i x \leq b_i ,i = [1,m]$$.  Analytic centers have geometric applications, and play an important role in barrier methods.) 
