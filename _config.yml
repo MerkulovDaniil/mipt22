@@ -17,8 +17,10 @@ gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into t
 
 # Aux links for the upper right navigation
 aux_links:
-  "fmin.xyz":
+  "💎 fmin.xyz":
     - "https://fmin.xyz"
+  "📜 Ведомость":
+    - "https://docs.google.com/spreadsheets/d/1WNbD8Fij7xkGmXXqDa13DhZ7IIIQb2MesgAIHRjYe58/edit?usp=sharing"
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 
