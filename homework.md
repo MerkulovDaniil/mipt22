@@ -333,3 +333,81 @@ You can use any automatic differentiation framework in this section (Jax, PyTorc
 	with domain $$\{x \mid a^\top_i x < b_i , i = [1,m]\}$$. 
 	
 	First introduce new variables $$y_i$$ and equality constraints $$y_i = b_i − a^\top_i x$$. (The solution of this problem is called the analytic center of the linear inequalities $$a^\top_i x \leq b_i ,i = [1,m]$$.  Analytic centers have geometric applications, and play an important role in barrier methods.) 
+	
+## Linear Programming
+
+1. **📱🎧💻 Covers manufacturing.** Random Corp is producing covers for following products: 
+	* 📱 phones
+	* 🎧 headphones
+	* 💻 laptops
+
+	The company’s production facilities are such that if we devote the entire production to headphones covers, we can produce 5000 of them in one day. If we devote the entire production to phone covers or laptop covers, we can produce 4000 or 2000 of them in one day. 
+
+	The production schedule is one week (6 working days), and the week’s production must be stored before distribution. Storing 1000 headphones covers (packaging included) takes up 30 cubic feet of space. Storing 1000 phone covers (packaging included) takes up 50 cubic feet of space, and storing 1000 laptop covers (packaging included) takes up 220 cubic feet of space. The total storage space available is 1500 cubic feet. 
+	
+
+	Due to commercial agreements with Random Corp has to deliver at least 4500 headphones covers and 3000 laptop covers per week in order to strengthen the product’s diffusion. 
+
+	The marketing department estimates that the weekly demand for headphones covers, phone, and laptop covers does not exceed 9000 and 14000, and 7000 units, therefore the company does not want to produce more than these amounts for headphones, phone, and laptop covers. 
+
+	Finally, the net profit per each headphones cover, phone cover, and laptop cover is \$5, \$7, and \$12, respectively.
+
+	The aim is to determine a weekly production schedule that maximizes the total net profit.
+
+	1. Write a Linear Programming formulation for the problem.	Use following variables:
+
+		* $$y_1$$ = number of headphones covers produced over the week,  
+		* $$y_2$$ = number of phone covers produced over the week,  
+		* $$y_3$$ = number of laptop covers produced over the week. 
+
+	1. Find the solution to the problem using [PyOMO](http://www.pyomo.org)
+		```python
+		!pip install pyomo
+		! sudo apt-get install glpk-utils --quiet  # GLPK
+		! sudo apt-get install coinor-cbc --quiet  # CoinOR
+		```
+
+1. Prove the optimality of the solution
+	
+	$$
+	x^\top = \left(\frac{5}{26} , \frac{5}{2}, \frac{27}{26}\right)
+	$$
+	
+	to the following linear programming problem:
+	
+	$$
+	\begin{split}
+	& 9x_1 + 14x_2 + 7x_3 \to \max\limits_{x \in \mathbb{R}^3 }\\
+	\text{s.t. } & 2x_1 + x_2 + 3x_3 \leq 6 \\
+	& 5x_1 + 4x_2 + x_3 \leq 12 \\
+	& 2x_2 \leq 5,
+	\end{split}
+	$$
+
+	but you cannot use any numerical algorithm here.
+
+1. Transform the following linear program into an equivalent linear program in standard form $$\left(c^\top x \to \max\limits_{x\in \mathbb{R}^n} : Ax = b,x ≥ 0\right)$$:
+
+	$$
+	\begin{split}
+	& x_1−x_2 \to \min\limits_{x \in \mathbb{R}^2 }\\
+	\text{s.t. } & 2x_1 + x_2 \geq 3 \\
+	& 3x_1 − x_2 \leq 7 \\
+	& x_1 \geq 0
+	\end{split}
+	$$
+
+1. Consider:
+
+	$$
+	\begin{split}
+	& 4x_1 + 5x_2 + 2x_3 \to \max\limits_{x \in \mathbb{R}^3 }\\
+	\text{s.t. } & 2x_1 - x_2 + 2x_3 \leq 9 \\
+	& 3x_1 + 5x_2 + 4x_3 \leq 8 \\
+	& x_1 + x_2 + 2x_3 \leq 2 \\
+	& x_1, x_2, x_3 \geq 0,
+	\end{split}
+	$$
+
+	1. Find an optimal solution to the Linear Programming problem using the simplex method.
+	1. Write the dual linear program. Find an optimal dual solution. Do we have strong duality here?
