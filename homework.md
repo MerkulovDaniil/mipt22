@@ -411,3 +411,11 @@ You can use any automatic differentiation framework in this section (Jax, PyTorc
 
 	1. Find an optimal solution to the Linear Programming problem using the simplex method.
 	1. Write the dual linear program. Find an optimal dual solution. Do we have strong duality here?
+
+# Домашнее задание 3
+
+The file should be sent in the `.pdf` format created via $\LaTeX$ or [typora](<https://typora.io/>) or printed from pdf with the colab\jupyter notebook. The only handwritten part, that could be included in the solution are the figures and illustrations.
+
+**Deadline: 02.04.21 21:59:59**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/mipt22/blob/main/notebooks/23_HW_1.ipynb)
