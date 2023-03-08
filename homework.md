@@ -416,6 +416,6 @@ You can use any automatic differentiation framework in this section (Jax, PyTorc
 
 The file should be sent in the `.pdf` format created via $\LaTeX$ or [typora](<https://typora.io/>) or printed from pdf with the colab\jupyter notebook. The only handwritten part, that could be included in the solution are the figures and illustrations.
 
-**Deadline: 02.04.21 21:59:59**
+**Deadline: 02.04.23 21:59:59**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/mipt22/blob/main/notebooks/23_HW_1.ipynb)
