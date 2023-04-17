@@ -114,3 +114,13 @@ nav_order: 2
 [📄 Материалы](/presentations/22.pdf). [📝 Записи](/notes/22.pdf). [▶️ Youtube](https://youtu.be/mBdEt7idMR0). [💿 Скачать](https://disk.yandex.com/i/tOBf63eHLvzCbQ)
 
 Введение в стохастические градиентные методы. Батч, эпоха. Сходимость SGD.
+
+## Занятие 23 
+
+Практика. Заглядываем внутрь нейронной сети. Ссылки:
+* SGD в простейшем случае [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/mipt22/blob/main/notebooks/sgd.ipynb)
+* Наглядно про адаптивные методы градиентного спуска. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/sber219/blob/main/notebooks/9_01.ipynb)
+* Визуализация проекции функции потерь нейронной сети. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/sber219/blob/main/notebooks/10_3.ipynb)
+* Обзорные материалы со ссылками на статьи про поверхность функции потерь нейронной сети. [[1]](https://izmailovpavel.github.io/curves_blogpost/); [[2]](https://losslandscape.com/explorer); [[3]](https://jithinjk.github.io/blog/nn_loss_visualized.md.html); [[4]](https://www.telesens.co/loss-landscape-viz/viewer.html)
+* Приложения нейронных сетей. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/MerkulovDaniil/sber219/blob/main/notebooks/10_1.ipynb)
+* Практика логгирования данных с помощью библиотеки wandb. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg#button)](https://colab.research.google.com/github/oseledets/dl2023/blob/main/seminars/seminar-3/Logging_practice.ipynb)
